@@ -576,7 +576,7 @@ router.put("/put/repair/:id", (req, res, next) => {
   console.log("id23", req.body.device_id);
   console.log("reqbody", req.body);
   connect.query(
-    "UPDATE tbl_repair SET case_detail=? WHERE id = ?",
+    "UPDATE CMMS.tbl_repair SET case_detail=? WHERE id = ?",
     [case_detail, id],
     (err, result) => {
       lineNotify
